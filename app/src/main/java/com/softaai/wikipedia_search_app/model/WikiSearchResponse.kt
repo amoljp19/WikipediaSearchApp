@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class ApiResponse(
+data class WikiSearchResponse(
     @Json(name = "batchcomplete")
     val batchcomplete: Boolean,
     @Json(name = "continue")
