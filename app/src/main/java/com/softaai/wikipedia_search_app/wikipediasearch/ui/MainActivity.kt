@@ -1,4 +1,4 @@
-package com.softaai.wikipedia_search_app.wikipediasearch
+package com.softaai.wikipedia_search_app.wikipediasearch.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

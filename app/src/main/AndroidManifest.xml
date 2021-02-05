@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Wikipediasearchapp">
-        <activity android:name=".wikipediasearch.MainActivity">
+        <activity android:name=".wikipediasearch.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
