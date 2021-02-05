@@ -1,10 +1,13 @@
 package com.softaai.wikipedia_search_app.model
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
+@Entity
 data class Page(
     @Json(name = "canonicalurl")
     val canonicalurl: String,
@@ -22,6 +25,7 @@ data class Page(
     val length: Int,
     @Json(name = "ns")
     val ns: Int,
+    @field:PrimaryKey
     @Json(name = "pageid")
     val pageid: Int,
     @Json(name = "pagelanguage")
