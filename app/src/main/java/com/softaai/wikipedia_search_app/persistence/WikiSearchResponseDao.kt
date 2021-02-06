@@ -14,6 +14,9 @@ interface WikiSearchResponseDao {
     fun getAllWikiPages(): Flow<List<Page>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertPages(pages: List<Page>)
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(page: Page)
 
     @Query("DELETE FROM Page")
