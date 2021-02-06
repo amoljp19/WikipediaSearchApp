@@ -35,9 +35,9 @@ data class Page(
     @Json(name = "pagelanguagehtmlcode")
     val pagelanguagehtmlcode: String,
     @Json(name = "terms")
-    val terms: Terms,
+    val terms: Terms?,
     @Json(name = "thumbnail")
-    val thumbnail: Thumbnail,
+    val thumbnail: Thumbnail?,
     @Json(name = "title")
     val title: String,
     @Json(name = "touched")

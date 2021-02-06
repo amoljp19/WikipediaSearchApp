@@ -9,19 +9,19 @@ interface WikipediaApiService {
 
     @GET("/w/api.php")
     fun fetchSearchData(
-        action:String = "query",
-        formatVersion:String = "2",
-        generator:String = "prefixsearch",
+        @Query("action") action:String = "query",
+        @Query("formatversion") formatversion:String = "2",
+        @Query("generator") generator:String = "prefixsearch",
         @Query("gpssearch") term: String = "kotlin",
         @Query("gpslimit") gpslimit: String = "10",
-        @Query("gpsoffset") skip: String = "",
-        prop:String = "pageimages|info",
-        piprop:String = "thumbnail|url",
-        pithumbsize:String = "200",
+        @Query("gpsoffset") skip: String = "10",
+        @Query("prop") prop:String = "pageimages|pageterms|info",
+        @Query("piprop") piprop:String = "thumbnail|url",
+        @Query("pithumbsize") pithumbsize:String = "50",
         @Query("pilimit") pilimit: String = "10",
-        wbptterms:String = "description",
-        format:String = "json",
-        inprop:String = "url"
+        @Query("wbptterms") wbptterms:String = "description",
+        @Query("format") format:String = "json",
+        @Query("inprop") inprop:String = "url"
     ): Call<WikiSearchResponse>
 
 }

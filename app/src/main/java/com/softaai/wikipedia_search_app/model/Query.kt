@@ -9,5 +9,5 @@ data class Query(
     @Json(name = "pages")
     val pages: List<Page>,
     @Json(name = "redirects")
-    val redirects: List<Redirect>
+    val redirects: List<Redirect>?
 )

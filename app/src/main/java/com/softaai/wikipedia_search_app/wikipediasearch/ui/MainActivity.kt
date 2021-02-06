@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.softaai.wikipedia_search_app.R
 import com.softaai.wikipedia_search_app.wikipediasearch.adapter.WikiSearchListAdapter
 import com.softaai.wikipedia_search_app.wikipediasearch.viewmodel.WikiSearchViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val wikiSearchViewModel : WikiSearchViewModel by viewModels()

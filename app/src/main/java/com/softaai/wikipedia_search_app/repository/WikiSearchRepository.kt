@@ -32,7 +32,7 @@ class WikiSearchRepository(private val wikipediaApiClient: WikipediaApiClient, p
         var allPages = wikiSearchResponseDao.getAllWikiPages().asLiveData().value
 
         if (allPages.isNullOrEmpty() == true) {
-            wikipediaApiClient.fetchSearchData{ response ->
+            wikipediaApiClient.fetchSearchData { response ->
                 when (response) {
                     is ApiResponse.Success -> {
                         response.data.let {
